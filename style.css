@@ -1,0 +1,60 @@
+body {
+    background-color: white;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#mainContent {
+    flex-direction: column;
+}
+
+header {
+    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#sketch {
+    width: 700px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr); 
+    grid-template-rows: repeat(16, 1fr);
+    box-shadow: 0px 0px 25px -9px rgba(0,0,0,0.73);
+    background-color: white;
+    opacity: 0.9;
+    margin: 2vh;
+}
+
+.sketchDiv {
+    border: gainsboro 0.1ch solid;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border: black 3px solid;
+}
+
+#colorSelector {
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border: black 3px solid;
+}
