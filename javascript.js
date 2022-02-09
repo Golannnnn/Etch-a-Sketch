@@ -2,17 +2,16 @@ const main = document.querySelector('main');
 const sketch = document.querySelector('#sketch');
 const numOfSquares = document.querySelector('#numOfSquares');
 const reset = document.querySelector('#Reset');
-const reg = /^(?:[1-9]\d*|\d)$/;
 const colorSelector = document.querySelector('#colorSelector');
 const randomColor = Math.floor(Math.random()*16777215).toString(16);
-
+const reg = /^(?:[1-9]\d*|\d)$/;
 
 for (i = 0; i < 256; i++) {
     let divs = document.createElement('div');
     divs.classList.add('sketchDiv');
     sketch.appendChild(divs);
     reset.addEventListener("click", function() {
-        divs.style.backgroundColor = "white";
+        divs.style.backgroundColor = "#faf1cf";
     });
     divs.onmouseenter = function() {
         switch(colorSelector.value) {
@@ -53,7 +52,7 @@ numOfSquares.addEventListener("click", function() {
                 sketch.style.gridTemplateRows = `repeat(${x}, 1fr)`;
                 sketch.appendChild(divs);
                 reset.addEventListener("click", function() {
-                    divs.style.backgroundColor = "white";
+                    divs.style.backgroundColor = "#faf1cf";
                 });
                 divs.onmouseenter = function() {
                     switch(colorSelector.value) {
@@ -85,10 +84,3 @@ numOfSquares.addEventListener("click", function() {
         alert("no thanks");
     };
 });
-
-
-/* 
-    -only color when mouse clicked
-    - 
-
-*/
